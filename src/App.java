@@ -12,5 +12,10 @@ public class App {
         players[2] = three;
         players[3] = four;
         Game game = new Game(players);
+        for (int i = 0; i < player_amount; i++){
+            System.out.print(game.getPlayers()[i].getName());
+            System.out.print("hand :");
+            System.out.println(game.getPlayers()[i].getHand().handToString());
+        }
     }
 }

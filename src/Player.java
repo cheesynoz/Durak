@@ -5,8 +5,18 @@ public class Player {
 
     public Player(String name){
         this.name = name;
+        Hand hand = new Hand();
+        this.hand = hand;
     }
-    
+
+    public Hand getHand(){
+        return this.hand;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
     public void addCard(Card card){
         this.hand.addCard(card);
     }
@@ -23,7 +33,5 @@ public class Player {
         this.hand.clearHand();
     }
 
-    public void printHand(){
-        this.hand.printHand();
-    }
+    
 }

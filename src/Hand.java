@@ -2,10 +2,7 @@ import java.util.ArrayList;
 public class Hand {
     private ArrayList<Card> cards = new ArrayList<Card>();
 
-    public Hand(Card[] starting){
-        for (int i = 0; i < 6; i++){
-            this.cards.add(starting[i]);
-        }
+    public Hand(){
     }
 
     public void addCard(Card card){
@@ -27,7 +24,11 @@ public class Hand {
         this.cards.clear();
     }
 
-    public void printHand(){
-        System.out.println(this.cards.toString());
+    public String handToString(){
+        String send = "";
+        for (int i = 0; i < this.cards.size(); i++){
+            send = send + this.cards.get(i).getIdentity() + ", ";
+        }
+        return send;
     }
 }
