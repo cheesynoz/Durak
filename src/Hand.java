@@ -15,6 +15,33 @@ public class Hand {
             this.cards.remove(index);
         }
     }
+
+    public boolean containsTrump(int suit){
+        for (int i = 0; i < cards.size(); i++){
+            if (this.cards.get(i).getSuit() == suit){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int lowestTrump(int suit){
+        Card card = new Card();
+        for (int i = 0; i < cards.size(); i++){
+            if (this.cards.get(i).getSuit() == suit){
+                if (this.cards.get(i).getValue() < card.getValue()){
+                    card = this.cards.get(i);
+                }
+                else{
+                    if(this.cards.get(i).getValue() < card.getValue()){
+                        card = this.cards.get(i);
+                    }
+                }
+            }
+        }
+    
+        return card.getValue();
+    }
     
     public int getSize(){
         return this.cards.size();

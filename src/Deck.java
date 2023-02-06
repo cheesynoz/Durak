@@ -8,16 +8,10 @@ public class Deck {
         int ctr = 1;
         for (int i = 1; ctr < 5; ++i) {
             for (int j = 1; j < (amount/4)+1; ++j) {
-                if (j == 1){
-                    Card card = new Card(j, i);
-                    this.undrawn.add(card);
-                }
-                else{
-                    //only for 36(no 2,3,4,5 in deck), fix later to account for different sizes 
-                    Card card = new Card(j+4, i);
-                    this.undrawn.add(card);
-                }
-            }
+                //only for 36(no 2,3,4,5 in deck), fix later to account for different sizes 
+                Card card = new Card(j+5, i);
+                this.undrawn.add(card);
+        }
             ++ctr;
         }
         Collections.shuffle(this.undrawn);

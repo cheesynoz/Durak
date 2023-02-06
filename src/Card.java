@@ -4,6 +4,10 @@ public class Card{
     private int suit;
     private String ImageName;
 
+    public Card(){
+        this.value = 50;
+    }
+
     public Card(int value, int suit){
         this.value = value;
         this.suit = suit;
@@ -27,7 +31,7 @@ public class Card{
 
     public String getLetterValue(){
         String letter = "";
-        if(this.value == 1){
+        if(this.value == 14){
             letter = "A";
         }
         else if(this.value == 11){
