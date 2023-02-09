@@ -20,6 +20,7 @@ public class App {
         System.out.print("Trump card: ");
         System.out.println(game.getTrump().getIdentity());
         System.out.print("Starting player: ");
-        System.out.print(game.getStartingPlayer().getName());
+        System.out.println(game.getStartingPlayer().getName());
+        System.out.println(game.getPlayers()[0].getHand().getSize());
     }
 }

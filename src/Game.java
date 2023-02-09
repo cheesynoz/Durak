@@ -29,7 +29,7 @@ public class Game {
     public void dealStarting(Deck deck){
         for(int i = 0; i < 6; i ++){
             for (int j = 0; j < players.length; j++){
-                this.players[j].addCard(deck.draw());
+                this.players[j].addCard(deck.draw(), this.trump.getSuit());
             }
         }
     }
@@ -40,7 +40,6 @@ public class Game {
         for(int i = 0; i < players.length; i++){
             if (players[i].getHand().containsTrump(this.trump.getSuit())){
                 int lowest = players[i].getHand().lowestTrump(this.trump.getSuit());
-                System.out.print(players[i].getName() + "'s lowest trump card is " + String.valueOf(lowest));
                 if (lowest < value){
                     value = lowest;
                     starter = i;
