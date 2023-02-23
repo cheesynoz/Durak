@@ -3,8 +3,10 @@ public class Game {
     private Card trump;
     private Player players[];
     private ArrayList<Player> activePlayers = new ArrayList<Player>();
+    private ArrayList<Card> board = new ArrayList<Card>();
     private Deck deck;
     private int dealer = 0;
+    private boolean finished = false;
     
 
     public Game(Player players[]){
@@ -18,12 +20,17 @@ public class Game {
         dealStarting(deck);
     }
 
+
     public Player[] getPlayers(){
         return this.players;
     }
 
     public Card getTrump(){
         return this.trump;
+    }
+
+    public boolean getFinished(){
+        return this.finished;
     }
 
     public void dealStarting(Deck deck){
