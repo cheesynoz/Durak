@@ -98,6 +98,10 @@ public class Hand {
         this.cards.clear();
     }
 
+    public  ArrayList<Card> getCards(){
+        return this.cards;
+    }
+
     public String handToString(){
         String send = "";
         for (int i = 0; i < this.cards.size(); i++){
