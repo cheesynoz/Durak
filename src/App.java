@@ -12,5 +12,15 @@ public class App {
         players[2] = three;
         players[3] = four;
         Game game = new Game(players);
+        for (int i = 0; i < player_amount; i++){
+            System.out.print(game.getPlayers()[i].getName());
+            System.out.print(" hand :");
+            System.out.println(game.getPlayers()[i].getHand().handToString());
+        }
+        System.out.print("Trump card: ");
+        System.out.println(game.getTrump().getIdentity());
+        System.out.print("Starting player: ");
+        System.out.println(game.getStartingPlayer().getName());
+        System.out.println(game.getPlayers()[0].getHand().getSize());
     }
 }
