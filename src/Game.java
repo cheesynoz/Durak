@@ -18,6 +18,7 @@ public class Game {
             this.activePlayers.add(players[i]);
         }
         dealStarting(deck);
+        GUI gui = new GUI();
     }
 
 
