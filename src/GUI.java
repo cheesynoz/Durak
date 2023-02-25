@@ -31,7 +31,9 @@ public class GUI implements ActionListener{
         this.panel.setBorder(BorderFactory.createEmptyBorder(400, 400, 400, 400));
         this.panel.setLayout(new GridLayout(0,2));
         this.panel.add(button);
-        this.panel.add(label);
+        this.label.setOpaque(true);
+        this.panel.setBackground(Color.GREEN.darker().darker());
+        this.panel.add(this.label);
 
         this.frame.add(panel, BorderLayout.CENTER);
         this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
